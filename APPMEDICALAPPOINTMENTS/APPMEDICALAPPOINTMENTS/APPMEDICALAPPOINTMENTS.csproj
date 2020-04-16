@@ -56,6 +56,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataContext.cs" />
     <Compile Include="Data\Category.cs" />
     <Compile Include="Data\IEntity.cs" />
     <Compile Include="Data\Medic.cs" />
