@@ -14,7 +14,7 @@ namespace APPMEDICALAPPOINTMENTS
 {
     public partial class FrmCategoria : MetroFramework.Forms.MetroForm
     {
-        private object userBindingSource;
+        
 
         public FrmCategoria()
         {
@@ -102,6 +102,12 @@ namespace APPMEDICALAPPOINTMENTS
             pnlDatos.Enabled = false;
             categoryBindingSource.ResetBindings(false);
             FrmCategoria_Load(sender, e);
+        }
+
+        private void grdDatos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            Category category = categoryBindingSource.Current as Category;
+          
         }
     }
 }
