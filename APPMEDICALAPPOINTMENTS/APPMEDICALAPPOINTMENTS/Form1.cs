@@ -100,10 +100,11 @@ namespace APPMEDICALAPPOINTMENTS
         {
             pnlDatos.Enabled = false;
             userBindingSource.ResetBindings(false);
-            FrmUser_Load(sender, e);
+            FrmUsers_Load(sender, e);
+
         }
 
-        private void FrmUser_Load(object sender, EventArgs e)
+        private void FrmUsers_Load(object sender, EventArgs e)
         {
             throw new NotImplementedException();
         }

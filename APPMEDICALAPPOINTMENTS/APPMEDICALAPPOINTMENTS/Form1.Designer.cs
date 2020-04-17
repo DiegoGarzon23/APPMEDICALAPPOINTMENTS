@@ -33,17 +33,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.grdDatos = new MetroFramework.Controls.MetroGrid();
-            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.firstNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lastNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fullNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.userNumberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.emailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.passwordDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.activatedDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.userAdministratorDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.userCreationDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.reservationsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.userBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.pnlDatos = new MetroFramework.Controls.MetroPanel();
             this.chbNo = new MetroFramework.Controls.MetroCheckBox();
@@ -73,6 +62,17 @@
             this.btnAgregar = new MetroFramework.Controls.MetroButton();
             this.btnSalir = new MetroFramework.Controls.MetroButton();
             this.btnEliminar = new MetroFramework.Controls.MetroButton();
+            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.firstNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lastNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fullNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.userNumberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.emailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.passwordDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.activatedDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.userAdministratorDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.userCreationDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.reservationsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.grdDatos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.userBindingSource)).BeginInit();
             this.pnlDatos.SuspendLayout();
@@ -135,74 +135,6 @@
             this.grdDatos.Size = new System.Drawing.Size(1158, 99);
             this.grdDatos.TabIndex = 0;
             this.grdDatos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grdDatos_CellContentClick);
-            // 
-            // idDataGridViewTextBoxColumn
-            // 
-            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
-            this.idDataGridViewTextBoxColumn.HeaderText = "Id";
-            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
-            this.idDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // firstNameDataGridViewTextBoxColumn
-            // 
-            this.firstNameDataGridViewTextBoxColumn.DataPropertyName = "FirstName";
-            this.firstNameDataGridViewTextBoxColumn.HeaderText = "FirstName";
-            this.firstNameDataGridViewTextBoxColumn.Name = "firstNameDataGridViewTextBoxColumn";
-            // 
-            // lastNameDataGridViewTextBoxColumn
-            // 
-            this.lastNameDataGridViewTextBoxColumn.DataPropertyName = "LastName";
-            this.lastNameDataGridViewTextBoxColumn.HeaderText = "LastName";
-            this.lastNameDataGridViewTextBoxColumn.Name = "lastNameDataGridViewTextBoxColumn";
-            // 
-            // fullNameDataGridViewTextBoxColumn
-            // 
-            this.fullNameDataGridViewTextBoxColumn.DataPropertyName = "FullName";
-            this.fullNameDataGridViewTextBoxColumn.HeaderText = "FullName";
-            this.fullNameDataGridViewTextBoxColumn.Name = "fullNameDataGridViewTextBoxColumn";
-            this.fullNameDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // userNumberDataGridViewTextBoxColumn
-            // 
-            this.userNumberDataGridViewTextBoxColumn.DataPropertyName = "UserNumber";
-            this.userNumberDataGridViewTextBoxColumn.HeaderText = "UserNumber";
-            this.userNumberDataGridViewTextBoxColumn.Name = "userNumberDataGridViewTextBoxColumn";
-            // 
-            // emailDataGridViewTextBoxColumn
-            // 
-            this.emailDataGridViewTextBoxColumn.DataPropertyName = "Email";
-            this.emailDataGridViewTextBoxColumn.HeaderText = "Email";
-            this.emailDataGridViewTextBoxColumn.Name = "emailDataGridViewTextBoxColumn";
-            // 
-            // passwordDataGridViewTextBoxColumn
-            // 
-            this.passwordDataGridViewTextBoxColumn.DataPropertyName = "Password";
-            this.passwordDataGridViewTextBoxColumn.HeaderText = "Password";
-            this.passwordDataGridViewTextBoxColumn.Name = "passwordDataGridViewTextBoxColumn";
-            // 
-            // activatedDataGridViewCheckBoxColumn
-            // 
-            this.activatedDataGridViewCheckBoxColumn.DataPropertyName = "Activated";
-            this.activatedDataGridViewCheckBoxColumn.HeaderText = "Activated";
-            this.activatedDataGridViewCheckBoxColumn.Name = "activatedDataGridViewCheckBoxColumn";
-            // 
-            // userAdministratorDataGridViewCheckBoxColumn
-            // 
-            this.userAdministratorDataGridViewCheckBoxColumn.DataPropertyName = "UserAdministrator";
-            this.userAdministratorDataGridViewCheckBoxColumn.HeaderText = "UserAdministrator";
-            this.userAdministratorDataGridViewCheckBoxColumn.Name = "userAdministratorDataGridViewCheckBoxColumn";
-            // 
-            // userCreationDateDataGridViewTextBoxColumn
-            // 
-            this.userCreationDateDataGridViewTextBoxColumn.DataPropertyName = "UserCreationDate";
-            this.userCreationDateDataGridViewTextBoxColumn.HeaderText = "UserCreationDate";
-            this.userCreationDateDataGridViewTextBoxColumn.Name = "userCreationDateDataGridViewTextBoxColumn";
-            // 
-            // reservationsDataGridViewTextBoxColumn
-            // 
-            this.reservationsDataGridViewTextBoxColumn.DataPropertyName = "Reservations";
-            this.reservationsDataGridViewTextBoxColumn.HeaderText = "Reservations";
-            this.reservationsDataGridViewTextBoxColumn.Name = "reservationsDataGridViewTextBoxColumn";
             // 
             // userBindingSource
             // 
@@ -435,7 +367,7 @@
             // lblUserNumber
             // 
             this.lblUserNumber.AutoSize = true;
-            this.lblUserNumber.Location = new System.Drawing.Point(19, 131);
+            this.lblUserNumber.Location = new System.Drawing.Point(9, 131);
             this.lblUserNumber.Name = "lblUserNumber";
             this.lblUserNumber.Size = new System.Drawing.Size(107, 38);
             this.lblUserNumber.TabIndex = 10;
@@ -475,11 +407,11 @@
             // lblFullName
             // 
             this.lblFullName.AutoSize = true;
-            this.lblFullName.Location = new System.Drawing.Point(14, 100);
+            this.lblFullName.Location = new System.Drawing.Point(9, 100);
             this.lblFullName.Name = "lblFullName";
-            this.lblFullName.Size = new System.Drawing.Size(112, 19);
+            this.lblFullName.Size = new System.Drawing.Size(122, 19);
             this.lblFullName.TabIndex = 8;
-            this.lblFullName.Text = "Apellido Materno";
+            this.lblFullName.Text = "Nombre Completo";
             // 
             // txtLastName
             // 
@@ -517,9 +449,9 @@
             this.lblLastName.AutoSize = true;
             this.lblLastName.Location = new System.Drawing.Point(14, 74);
             this.lblLastName.Name = "lblLastName";
-            this.lblLastName.Size = new System.Drawing.Size(107, 19);
+            this.lblLastName.Size = new System.Drawing.Size(63, 19);
             this.lblLastName.TabIndex = 6;
-            this.lblLastName.Text = "Apellido Paterno";
+            this.lblLastName.Text = "Apellidos";
             // 
             // txtFirstName
             // 
@@ -656,6 +588,74 @@
             this.btnEliminar.UseSelectable = true;
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
+            // idDataGridViewTextBoxColumn
+            // 
+            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
+            this.idDataGridViewTextBoxColumn.HeaderText = "Id";
+            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            this.idDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // firstNameDataGridViewTextBoxColumn
+            // 
+            this.firstNameDataGridViewTextBoxColumn.DataPropertyName = "FirstName";
+            this.firstNameDataGridViewTextBoxColumn.HeaderText = "FirstName";
+            this.firstNameDataGridViewTextBoxColumn.Name = "firstNameDataGridViewTextBoxColumn";
+            // 
+            // lastNameDataGridViewTextBoxColumn
+            // 
+            this.lastNameDataGridViewTextBoxColumn.DataPropertyName = "LastName";
+            this.lastNameDataGridViewTextBoxColumn.HeaderText = "LastName";
+            this.lastNameDataGridViewTextBoxColumn.Name = "lastNameDataGridViewTextBoxColumn";
+            // 
+            // fullNameDataGridViewTextBoxColumn
+            // 
+            this.fullNameDataGridViewTextBoxColumn.DataPropertyName = "FullName";
+            this.fullNameDataGridViewTextBoxColumn.HeaderText = "FullName";
+            this.fullNameDataGridViewTextBoxColumn.Name = "fullNameDataGridViewTextBoxColumn";
+            this.fullNameDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // userNumberDataGridViewTextBoxColumn
+            // 
+            this.userNumberDataGridViewTextBoxColumn.DataPropertyName = "UserNumber";
+            this.userNumberDataGridViewTextBoxColumn.HeaderText = "UserNumber";
+            this.userNumberDataGridViewTextBoxColumn.Name = "userNumberDataGridViewTextBoxColumn";
+            // 
+            // emailDataGridViewTextBoxColumn
+            // 
+            this.emailDataGridViewTextBoxColumn.DataPropertyName = "Email";
+            this.emailDataGridViewTextBoxColumn.HeaderText = "Email";
+            this.emailDataGridViewTextBoxColumn.Name = "emailDataGridViewTextBoxColumn";
+            // 
+            // passwordDataGridViewTextBoxColumn
+            // 
+            this.passwordDataGridViewTextBoxColumn.DataPropertyName = "Password";
+            this.passwordDataGridViewTextBoxColumn.HeaderText = "Password";
+            this.passwordDataGridViewTextBoxColumn.Name = "passwordDataGridViewTextBoxColumn";
+            // 
+            // activatedDataGridViewCheckBoxColumn
+            // 
+            this.activatedDataGridViewCheckBoxColumn.DataPropertyName = "Activated";
+            this.activatedDataGridViewCheckBoxColumn.HeaderText = "Activated";
+            this.activatedDataGridViewCheckBoxColumn.Name = "activatedDataGridViewCheckBoxColumn";
+            // 
+            // userAdministratorDataGridViewCheckBoxColumn
+            // 
+            this.userAdministratorDataGridViewCheckBoxColumn.DataPropertyName = "UserAdministrator";
+            this.userAdministratorDataGridViewCheckBoxColumn.HeaderText = "UserAdministrator";
+            this.userAdministratorDataGridViewCheckBoxColumn.Name = "userAdministratorDataGridViewCheckBoxColumn";
+            // 
+            // userCreationDateDataGridViewTextBoxColumn
+            // 
+            this.userCreationDateDataGridViewTextBoxColumn.DataPropertyName = "UserCreationDate";
+            this.userCreationDateDataGridViewTextBoxColumn.HeaderText = "UserCreationDate";
+            this.userCreationDateDataGridViewTextBoxColumn.Name = "userCreationDateDataGridViewTextBoxColumn";
+            // 
+            // reservationsDataGridViewTextBoxColumn
+            // 
+            this.reservationsDataGridViewTextBoxColumn.DataPropertyName = "Reservations";
+            this.reservationsDataGridViewTextBoxColumn.HeaderText = "Reservations";
+            this.reservationsDataGridViewTextBoxColumn.Name = "reservationsDataGridViewTextBoxColumn";
+            // 
             // FrmUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -682,17 +682,6 @@
         #endregion
 
         private MetroFramework.Controls.MetroGrid grdDatos;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn firstNameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn lastNameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn fullNameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn userNumberDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn emailDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn passwordDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn activatedDataGridViewCheckBoxColumn;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn userAdministratorDataGridViewCheckBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn userCreationDateDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn reservationsDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource userBindingSource;
         private MetroFramework.Controls.MetroPanel pnlDatos;
         private MetroFramework.Controls.MetroTextBox txtFullName;
@@ -722,6 +711,17 @@
         private MetroFramework.Controls.MetroButton btnEliminar;
         private MetroFramework.Controls.MetroCheckBox chbNo;
         private MetroFramework.Controls.MetroCheckBox chbYes;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn firstNameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn lastNameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fullNameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn userNumberDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn emailDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn passwordDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn activatedDataGridViewCheckBoxColumn;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn userAdministratorDataGridViewCheckBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn userCreationDateDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn reservationsDataGridViewTextBoxColumn;
     }
 }
 
