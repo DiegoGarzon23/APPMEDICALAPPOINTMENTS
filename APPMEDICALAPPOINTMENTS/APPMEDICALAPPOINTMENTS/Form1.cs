@@ -73,7 +73,7 @@ namespace APPMEDICALAPPOINTMENTS
         private void btnEliminar_Click(object sender, EventArgs e)
         {
             if (MetroFramework.MetroMessageBox.Show(this,
-                "¿Quieres eliminar el registro?",
+                "¿Quieres eliminar el usuario?",
                 "Eliminar",
                 MessageBoxButtons.OKCancel,
                 MessageBoxIcon.Question) == DialogResult.OK)
@@ -88,7 +88,7 @@ namespace APPMEDICALAPPOINTMENTS
                             dataContext.Set<User>().Attach(user);
                         dataContext.Entry<User>(user).State = EntityState.Deleted;
                         dataContext.SaveChanges();
-                        MetroFramework.MetroMessageBox.Show(this, "Empleado eliminado");
+                        MetroFramework.MetroMessageBox.Show(this, "Usuario eliminado");
                         userBindingSource.RemoveCurrent();
                         pnlDatos.Enabled = false;
                     }

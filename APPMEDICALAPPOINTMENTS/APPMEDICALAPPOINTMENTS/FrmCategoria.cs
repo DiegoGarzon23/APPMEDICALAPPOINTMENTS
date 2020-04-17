@@ -74,7 +74,7 @@ namespace APPMEDICALAPPOINTMENTS
         private void btnEliminar_Click(object sender, EventArgs e)
         {
             if (MetroFramework.MetroMessageBox.Show(this,
-               "¿Quieres eliminar el registro?",
+               "¿Quieres eliminar la categoria?",
                "Eliminar",
                MessageBoxButtons.OKCancel,
                MessageBoxIcon.Question) == DialogResult.OK)
@@ -89,7 +89,7 @@ namespace APPMEDICALAPPOINTMENTS
                             dataContext.Set<Category>().Attach(category);
                         dataContext.Entry<Category>(category).State = EntityState.Deleted;
                         dataContext.SaveChanges();
-                        MetroFramework.MetroMessageBox.Show(this, "Empleado eliminado");
+                        MetroFramework.MetroMessageBox.Show(this, "Categoria eliminada");
                         categoryBindingSource.RemoveCurrent();
                         pnlDatos.Enabled = false;
                     }
