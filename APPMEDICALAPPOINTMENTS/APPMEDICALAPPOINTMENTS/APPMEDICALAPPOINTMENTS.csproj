@@ -86,6 +86,12 @@
     <Compile Include="FrmCategoria.Designer.cs">
       <DependentUpon>FrmCategoria.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmPacient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmPacient.Designer.cs">
+      <DependentUpon>FrmPacient.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmPayment.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -115,6 +121,9 @@
     <EmbeddedResource Include="FrmCategoria.resx">
       <DependentUpon>FrmCategoria.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmPacient.resx">
+      <DependentUpon>FrmPacient.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmPayment.resx">
       <DependentUpon>FrmPayment.cs</DependentUpon>
     </EmbeddedResource>
@@ -138,6 +147,7 @@
     </Compile>
     <None Include="packages.config" />
     <None Include="Properties\DataSources\APPMEDICALAPPOINTMENTS.Data.Category.datasource" />
+    <None Include="Properties\DataSources\APPMEDICALAPPOINTMENTS.Data.Pacient.datasource" />
     <None Include="Properties\DataSources\APPMEDICALAPPOINTMENTS.Data.Payment.datasource" />
     <None Include="Properties\DataSources\APPMEDICALAPPOINTMENTS.Data.Status.datasource" />
     <None Include="Properties\DataSources\APPMEDICALAPPOINTMENTS.Data.User.datasource" />
