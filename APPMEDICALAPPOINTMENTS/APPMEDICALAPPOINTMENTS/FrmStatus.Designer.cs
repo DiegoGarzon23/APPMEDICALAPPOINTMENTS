@@ -33,10 +33,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.grdDatos = new MetroFramework.Controls.MetroGrid();
-            this.statusBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.statusNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.reservationDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pnlDatos = new MetroFramework.Controls.MetroPanel();
             this.lblId = new MetroFramework.Controls.MetroLabel();
             this.txtId = new MetroFramework.Controls.MetroTextBox();
@@ -49,9 +45,13 @@
             this.btnEditar = new MetroFramework.Controls.MetroButton();
             this.btnEliminar = new MetroFramework.Controls.MetroButton();
             this.btnSalir = new MetroFramework.Controls.MetroButton();
+            this.statusBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.statusNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.reservationDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.grdDatos)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.statusBindingSource)).BeginInit();
             this.pnlDatos.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.statusBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // grdDatos
@@ -104,29 +104,6 @@
             this.grdDatos.TabIndex = 0;
             this.grdDatos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grdDatos_CellContentClick);
             // 
-            // statusBindingSource
-            // 
-            this.statusBindingSource.DataSource = typeof(APPMEDICALAPPOINTMENTS.Data.Status);
-            // 
-            // idDataGridViewTextBoxColumn
-            // 
-            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
-            this.idDataGridViewTextBoxColumn.HeaderText = "Id";
-            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
-            this.idDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // statusNameDataGridViewTextBoxColumn
-            // 
-            this.statusNameDataGridViewTextBoxColumn.DataPropertyName = "StatusName";
-            this.statusNameDataGridViewTextBoxColumn.HeaderText = "StatusName";
-            this.statusNameDataGridViewTextBoxColumn.Name = "statusNameDataGridViewTextBoxColumn";
-            // 
-            // reservationDataGridViewTextBoxColumn
-            // 
-            this.reservationDataGridViewTextBoxColumn.DataPropertyName = "Reservation";
-            this.reservationDataGridViewTextBoxColumn.HeaderText = "Reservation";
-            this.reservationDataGridViewTextBoxColumn.Name = "reservationDataGridViewTextBoxColumn";
-            // 
             // pnlDatos
             // 
             this.pnlDatos.Controls.Add(this.rbnCancelado);
@@ -145,6 +122,7 @@
             this.pnlDatos.VerticalScrollbarBarColor = true;
             this.pnlDatos.VerticalScrollbarHighlightOnWheel = false;
             this.pnlDatos.VerticalScrollbarSize = 10;
+            this.pnlDatos.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlDatos_Paint);
             // 
             // lblId
             // 
@@ -278,6 +256,29 @@
             this.btnSalir.UseSelectable = true;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
+            // statusBindingSource
+            // 
+            this.statusBindingSource.DataSource = typeof(APPMEDICALAPPOINTMENTS.Data.Status);
+            // 
+            // idDataGridViewTextBoxColumn
+            // 
+            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
+            this.idDataGridViewTextBoxColumn.HeaderText = "Id";
+            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            this.idDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // statusNameDataGridViewTextBoxColumn
+            // 
+            this.statusNameDataGridViewTextBoxColumn.DataPropertyName = "StatusName";
+            this.statusNameDataGridViewTextBoxColumn.HeaderText = "StatusName";
+            this.statusNameDataGridViewTextBoxColumn.Name = "statusNameDataGridViewTextBoxColumn";
+            // 
+            // reservationDataGridViewTextBoxColumn
+            // 
+            this.reservationDataGridViewTextBoxColumn.DataPropertyName = "Reservation";
+            this.reservationDataGridViewTextBoxColumn.HeaderText = "Reservation";
+            this.reservationDataGridViewTextBoxColumn.Name = "reservationDataGridViewTextBoxColumn";
+            // 
             // FrmStatus
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -294,9 +295,9 @@
             this.Text = "Estado Cita";
             this.Load += new System.EventHandler(this.FrmStatus_Load);
             ((System.ComponentModel.ISupportInitialize)(this.grdDatos)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.statusBindingSource)).EndInit();
             this.pnlDatos.ResumeLayout(false);
             this.pnlDatos.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.statusBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }

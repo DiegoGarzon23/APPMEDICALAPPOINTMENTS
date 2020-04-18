@@ -108,5 +108,10 @@ namespace APPMEDICALAPPOINTMENTS
         {
             Status status = statusBindingSource.Current as Status;
         }
+
+        private void pnlDatos_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
