@@ -33,7 +33,14 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.grdDatos = new MetroFramework.Controls.MetroGrid();
+            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.paymentNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Price = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.reservationDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.paymentBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.pnlDatos = new MetroFramework.Controls.MetroPanel();
+            this.txtPrice = new MetroFramework.Controls.MetroTextBox();
+            this.lblPrice = new MetroFramework.Controls.MetroLabel();
             this.txtPaymentName = new MetroFramework.Controls.MetroTextBox();
             this.lblPaymentName = new MetroFramework.Controls.MetroLabel();
             this.txtId = new MetroFramework.Controls.MetroTextBox();
@@ -43,15 +50,9 @@
             this.btnEditar = new MetroFramework.Controls.MetroButton();
             this.btnSalir = new MetroFramework.Controls.MetroButton();
             this.btnEliminar = new MetroFramework.Controls.MetroButton();
-            this.paymentBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.paymentNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.reservationDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.txtPrice = new MetroFramework.Controls.MetroTextBox();
-            this.lblPrice = new MetroFramework.Controls.MetroLabel();
             ((System.ComponentModel.ISupportInitialize)(this.grdDatos)).BeginInit();
-            this.pnlDatos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.paymentBindingSource)).BeginInit();
+            this.pnlDatos.SuspendLayout();
             this.SuspendLayout();
             // 
             // grdDatos
@@ -74,6 +75,7 @@
             this.grdDatos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idDataGridViewTextBoxColumn,
             this.paymentNameDataGridViewTextBoxColumn,
+            this.Price,
             this.reservationDataGridViewTextBoxColumn});
             this.grdDatos.DataSource = this.paymentBindingSource;
             dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -104,6 +106,35 @@
             this.grdDatos.TabIndex = 0;
             this.grdDatos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grdDatos_CellContentClick);
             // 
+            // idDataGridViewTextBoxColumn
+            // 
+            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
+            this.idDataGridViewTextBoxColumn.HeaderText = "Id";
+            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            this.idDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // paymentNameDataGridViewTextBoxColumn
+            // 
+            this.paymentNameDataGridViewTextBoxColumn.DataPropertyName = "PaymentName";
+            this.paymentNameDataGridViewTextBoxColumn.HeaderText = "PaymentName";
+            this.paymentNameDataGridViewTextBoxColumn.Name = "paymentNameDataGridViewTextBoxColumn";
+            // 
+            // Price
+            // 
+            this.Price.DataPropertyName = "Price";
+            this.Price.HeaderText = "Price";
+            this.Price.Name = "Price";
+            // 
+            // reservationDataGridViewTextBoxColumn
+            // 
+            this.reservationDataGridViewTextBoxColumn.DataPropertyName = "Reservation";
+            this.reservationDataGridViewTextBoxColumn.HeaderText = "Reservation";
+            this.reservationDataGridViewTextBoxColumn.Name = "reservationDataGridViewTextBoxColumn";
+            // 
+            // paymentBindingSource
+            // 
+            this.paymentBindingSource.DataSource = typeof(APPMEDICALAPPOINTMENTS.Data.Payment);
+            // 
             // pnlDatos
             // 
             this.pnlDatos.Controls.Add(this.txtPrice);
@@ -123,13 +154,53 @@
             this.pnlDatos.VerticalScrollbarHighlightOnWheel = false;
             this.pnlDatos.VerticalScrollbarSize = 10;
             // 
+            // txtPrice
+            // 
+            // 
+            // 
+            // 
+            this.txtPrice.CustomButton.Image = null;
+            this.txtPrice.CustomButton.Location = new System.Drawing.Point(425, 1);
+            this.txtPrice.CustomButton.Name = "";
+            this.txtPrice.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.txtPrice.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txtPrice.CustomButton.TabIndex = 1;
+            this.txtPrice.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txtPrice.CustomButton.UseSelectable = true;
+            this.txtPrice.CustomButton.Visible = false;
+            this.txtPrice.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.paymentBindingSource, "Price", true));
+            this.txtPrice.Lines = new string[0];
+            this.txtPrice.Location = new System.Drawing.Point(102, 77);
+            this.txtPrice.MaxLength = 32767;
+            this.txtPrice.Name = "txtPrice";
+            this.txtPrice.PasswordChar = '\0';
+            this.txtPrice.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtPrice.SelectedText = "";
+            this.txtPrice.SelectionLength = 0;
+            this.txtPrice.SelectionStart = 0;
+            this.txtPrice.ShortcutsEnabled = true;
+            this.txtPrice.Size = new System.Drawing.Size(447, 23);
+            this.txtPrice.TabIndex = 7;
+            this.txtPrice.UseSelectable = true;
+            this.txtPrice.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txtPrice.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
+            // lblPrice
+            // 
+            this.lblPrice.AutoSize = true;
+            this.lblPrice.Location = new System.Drawing.Point(53, 81);
+            this.lblPrice.Name = "lblPrice";
+            this.lblPrice.Size = new System.Drawing.Size(43, 19);
+            this.lblPrice.TabIndex = 6;
+            this.lblPrice.Text = "Costo";
+            // 
             // txtPaymentName
             // 
             // 
             // 
             // 
             this.txtPaymentName.CustomButton.Image = null;
-            this.txtPaymentName.CustomButton.Location = new System.Drawing.Point(248, 1);
+            this.txtPaymentName.CustomButton.Location = new System.Drawing.Point(425, 1);
             this.txtPaymentName.CustomButton.Name = "";
             this.txtPaymentName.CustomButton.Size = new System.Drawing.Size(21, 21);
             this.txtPaymentName.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
@@ -148,7 +219,7 @@
             this.txtPaymentName.SelectionLength = 0;
             this.txtPaymentName.SelectionStart = 0;
             this.txtPaymentName.ShortcutsEnabled = true;
-            this.txtPaymentName.Size = new System.Drawing.Size(270, 23);
+            this.txtPaymentName.Size = new System.Drawing.Size(447, 23);
             this.txtPaymentName.TabIndex = 5;
             this.txtPaymentName.UseSelectable = true;
             this.txtPaymentName.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -169,7 +240,7 @@
             // 
             // 
             this.txtId.CustomButton.Image = null;
-            this.txtId.CustomButton.Location = new System.Drawing.Point(248, 1);
+            this.txtId.CustomButton.Location = new System.Drawing.Point(425, 1);
             this.txtId.CustomButton.Name = "";
             this.txtId.CustomButton.Size = new System.Drawing.Size(21, 21);
             this.txtId.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
@@ -188,7 +259,7 @@
             this.txtId.SelectionLength = 0;
             this.txtId.SelectionStart = 0;
             this.txtId.ShortcutsEnabled = true;
-            this.txtId.Size = new System.Drawing.Size(270, 23);
+            this.txtId.Size = new System.Drawing.Size(447, 23);
             this.txtId.TabIndex = 3;
             this.txtId.UseSelectable = true;
             this.txtId.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -207,7 +278,7 @@
             // 
             this.btnGuardar.Location = new System.Drawing.Point(395, 237);
             this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(105, 23);
+            this.btnGuardar.Size = new System.Drawing.Size(105, 39);
             this.btnGuardar.TabIndex = 2;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseSelectable = true;
@@ -217,7 +288,7 @@
             // 
             this.btnAgregar.Location = new System.Drawing.Point(506, 237);
             this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(105, 23);
+            this.btnAgregar.Size = new System.Drawing.Size(105, 39);
             this.btnAgregar.TabIndex = 3;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseSelectable = true;
@@ -227,7 +298,7 @@
             // 
             this.btnEditar.Location = new System.Drawing.Point(617, 237);
             this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(105, 23);
+            this.btnEditar.Size = new System.Drawing.Size(105, 39);
             this.btnEditar.TabIndex = 4;
             this.btnEditar.Text = "Editar";
             this.btnEditar.UseSelectable = true;
@@ -237,7 +308,7 @@
             // 
             this.btnSalir.Location = new System.Drawing.Point(839, 237);
             this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(105, 23);
+            this.btnSalir.Size = new System.Drawing.Size(105, 39);
             this.btnSalir.TabIndex = 5;
             this.btnSalir.Text = "Salir";
             this.btnSalir.UseSelectable = true;
@@ -247,74 +318,11 @@
             // 
             this.btnEliminar.Location = new System.Drawing.Point(728, 237);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(105, 23);
+            this.btnEliminar.Size = new System.Drawing.Size(105, 39);
             this.btnEliminar.TabIndex = 6;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseSelectable = true;
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
-            // 
-            // paymentBindingSource
-            // 
-            this.paymentBindingSource.DataSource = typeof(APPMEDICALAPPOINTMENTS.Data.Payment);
-            // 
-            // idDataGridViewTextBoxColumn
-            // 
-            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
-            this.idDataGridViewTextBoxColumn.HeaderText = "Id";
-            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
-            this.idDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // paymentNameDataGridViewTextBoxColumn
-            // 
-            this.paymentNameDataGridViewTextBoxColumn.DataPropertyName = "PaymentName";
-            this.paymentNameDataGridViewTextBoxColumn.HeaderText = "PaymentName";
-            this.paymentNameDataGridViewTextBoxColumn.Name = "paymentNameDataGridViewTextBoxColumn";
-            // 
-            // reservationDataGridViewTextBoxColumn
-            // 
-            this.reservationDataGridViewTextBoxColumn.DataPropertyName = "Reservation";
-            this.reservationDataGridViewTextBoxColumn.HeaderText = "Reservation";
-            this.reservationDataGridViewTextBoxColumn.Name = "reservationDataGridViewTextBoxColumn";
-            // 
-            // txtPrice
-            // 
-            // 
-            // 
-            // 
-            this.txtPrice.CustomButton.Image = null;
-            this.txtPrice.CustomButton.Location = new System.Drawing.Point(248, 1);
-            this.txtPrice.CustomButton.Name = "";
-            this.txtPrice.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.txtPrice.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.txtPrice.CustomButton.TabIndex = 1;
-            this.txtPrice.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.txtPrice.CustomButton.UseSelectable = true;
-            this.txtPrice.CustomButton.Visible = false;
-            this.txtPrice.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.paymentBindingSource, "PaymentName", true));
-            this.txtPrice.Lines = new string[0];
-            this.txtPrice.Location = new System.Drawing.Point(102, 77);
-            this.txtPrice.MaxLength = 32767;
-            this.txtPrice.Name = "txtPrice";
-            this.txtPrice.PasswordChar = '\0';
-            this.txtPrice.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.txtPrice.SelectedText = "";
-            this.txtPrice.SelectionLength = 0;
-            this.txtPrice.SelectionStart = 0;
-            this.txtPrice.ShortcutsEnabled = true;
-            this.txtPrice.Size = new System.Drawing.Size(270, 23);
-            this.txtPrice.TabIndex = 7;
-            this.txtPrice.UseSelectable = true;
-            this.txtPrice.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.txtPrice.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            // 
-            // lblPrice
-            // 
-            this.lblPrice.AutoSize = true;
-            this.lblPrice.Location = new System.Drawing.Point(53, 81);
-            this.lblPrice.Name = "lblPrice";
-            this.lblPrice.Size = new System.Drawing.Size(43, 19);
-            this.lblPrice.TabIndex = 6;
-            this.lblPrice.Text = "Costo";
             // 
             // FrmPayment
             // 
@@ -331,9 +339,9 @@
             this.Name = "FrmPayment";
             this.Text = "Pago";
             ((System.ComponentModel.ISupportInitialize)(this.grdDatos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.paymentBindingSource)).EndInit();
             this.pnlDatos.ResumeLayout(false);
             this.pnlDatos.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.paymentBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -341,9 +349,6 @@
         #endregion
 
         private MetroFramework.Controls.MetroGrid grdDatos;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn paymentNameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn reservationDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource paymentBindingSource;
         private MetroFramework.Controls.MetroPanel pnlDatos;
         private MetroFramework.Controls.MetroTextBox txtPaymentName;
@@ -357,5 +362,9 @@
         private MetroFramework.Controls.MetroButton btnEliminar;
         private MetroFramework.Controls.MetroTextBox txtPrice;
         private MetroFramework.Controls.MetroLabel lblPrice;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn paymentNameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Price;
+        private System.Windows.Forms.DataGridViewTextBoxColumn reservationDataGridViewTextBoxColumn;
     }
 }
