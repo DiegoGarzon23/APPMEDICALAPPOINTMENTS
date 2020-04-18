@@ -46,8 +46,6 @@
             this.reservationsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.userBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.pnlDatos = new MetroFramework.Controls.MetroPanel();
-            this.chbNo = new MetroFramework.Controls.MetroCheckBox();
-            this.chbYes = new MetroFramework.Controls.MetroCheckBox();
             this.metroDateTime1 = new MetroFramework.Controls.MetroDateTime();
             this.lblDateTime = new MetroFramework.Controls.MetroLabel();
             this.lblNoo = new MetroFramework.Controls.MetroRadioButton();
@@ -73,6 +71,8 @@
             this.btnAgregar = new MetroFramework.Controls.MetroButton();
             this.btnSalir = new MetroFramework.Controls.MetroButton();
             this.btnEliminar = new MetroFramework.Controls.MetroButton();
+            this.rbnNo = new MetroFramework.Controls.MetroRadioButton();
+            this.rbnYes = new MetroFramework.Controls.MetroRadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.grdDatos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.userBindingSource)).BeginInit();
             this.pnlDatos.SuspendLayout();
@@ -210,8 +210,8 @@
             // 
             // pnlDatos
             // 
-            this.pnlDatos.Controls.Add(this.chbNo);
-            this.pnlDatos.Controls.Add(this.chbYes);
+            this.pnlDatos.Controls.Add(this.rbnNo);
+            this.pnlDatos.Controls.Add(this.rbnYes);
             this.pnlDatos.Controls.Add(this.metroDateTime1);
             this.pnlDatos.Controls.Add(this.lblDateTime);
             this.pnlDatos.Controls.Add(this.lblNoo);
@@ -242,27 +242,6 @@
             this.pnlDatos.VerticalScrollbarBarColor = true;
             this.pnlDatos.VerticalScrollbarHighlightOnWheel = false;
             this.pnlDatos.VerticalScrollbarSize = 10;
-           
-            // 
-            // chbNo
-            // 
-            this.chbNo.AutoSize = true;
-            this.chbNo.Location = new System.Drawing.Point(826, 59);
-            this.chbNo.Name = "chbNo";
-            this.chbNo.Size = new System.Drawing.Size(39, 15);
-            this.chbNo.TabIndex = 25;
-            this.chbNo.Text = "No";
-            this.chbNo.UseSelectable = true;
-            // 
-            // chbYes
-            // 
-            this.chbYes.AutoSize = true;
-            this.chbYes.Location = new System.Drawing.Point(793, 59);
-            this.chbYes.Name = "chbYes";
-            this.chbYes.Size = new System.Drawing.Size(32, 15);
-            this.chbYes.TabIndex = 24;
-            this.chbYes.Text = "Si";
-            this.chbYes.UseSelectable = true;
             // 
             // metroDateTime1
             // 
@@ -657,6 +636,28 @@
             this.btnEliminar.UseSelectable = true;
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
+            // rbnNo
+            // 
+            this.rbnNo.AutoSize = true;
+            this.rbnNo.DataBindings.Add(new System.Windows.Forms.Binding("Checked", this.userBindingSource, "Activated", true));
+            this.rbnNo.Location = new System.Drawing.Point(826, 57);
+            this.rbnNo.Name = "rbnNo";
+            this.rbnNo.Size = new System.Drawing.Size(39, 15);
+            this.rbnNo.TabIndex = 25;
+            this.rbnNo.Text = "No";
+            this.rbnNo.UseSelectable = true;
+            // 
+            // rbnYes
+            // 
+            this.rbnYes.AutoSize = true;
+            this.rbnYes.DataBindings.Add(new System.Windows.Forms.Binding("Checked", this.userBindingSource, "Activated", true));
+            this.rbnYes.Location = new System.Drawing.Point(788, 57);
+            this.rbnYes.Name = "rbnYes";
+            this.rbnYes.Size = new System.Drawing.Size(32, 15);
+            this.rbnYes.TabIndex = 24;
+            this.rbnYes.Text = "Si";
+            this.rbnYes.UseSelectable = true;
+            // 
             // FrmUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -710,8 +711,6 @@
         private MetroFramework.Controls.MetroButton btnAgregar;
         private MetroFramework.Controls.MetroButton btnSalir;
         private MetroFramework.Controls.MetroButton btnEliminar;
-        private MetroFramework.Controls.MetroCheckBox chbNo;
-        private MetroFramework.Controls.MetroCheckBox chbYes;
         private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn firstNameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn lastNameDataGridViewTextBoxColumn;
@@ -723,6 +722,8 @@
         private System.Windows.Forms.DataGridViewCheckBoxColumn userAdministratorDataGridViewCheckBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn userCreationDateDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn reservationsDataGridViewTextBoxColumn;
+        private MetroFramework.Controls.MetroRadioButton rbnNo;
+        private MetroFramework.Controls.MetroRadioButton rbnYes;
     }
 }
 
