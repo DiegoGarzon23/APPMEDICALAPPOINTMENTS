@@ -16,7 +16,7 @@ namespace APPMEDICALAPPOINTMENTS
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmPacient());
+            Application.Run(new FrmStatus());
         }
     }
 }

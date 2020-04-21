@@ -46,6 +46,8 @@
             this.reservationsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.userBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.pnlDatos = new MetroFramework.Controls.MetroPanel();
+            this.rbnNo = new MetroFramework.Controls.MetroRadioButton();
+            this.rbnYes = new MetroFramework.Controls.MetroRadioButton();
             this.metroDateTime1 = new MetroFramework.Controls.MetroDateTime();
             this.lblDateTime = new MetroFramework.Controls.MetroLabel();
             this.lblNoo = new MetroFramework.Controls.MetroRadioButton();
@@ -71,8 +73,6 @@
             this.btnAgregar = new MetroFramework.Controls.MetroButton();
             this.btnSalir = new MetroFramework.Controls.MetroButton();
             this.btnEliminar = new MetroFramework.Controls.MetroButton();
-            this.rbnNo = new MetroFramework.Controls.MetroRadioButton();
-            this.rbnYes = new MetroFramework.Controls.MetroRadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.grdDatos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.userBindingSource)).BeginInit();
             this.pnlDatos.SuspendLayout();
@@ -242,6 +242,28 @@
             this.pnlDatos.VerticalScrollbarBarColor = true;
             this.pnlDatos.VerticalScrollbarHighlightOnWheel = false;
             this.pnlDatos.VerticalScrollbarSize = 10;
+            // 
+            // rbnNo
+            // 
+            this.rbnNo.AutoSize = true;
+            this.rbnNo.DataBindings.Add(new System.Windows.Forms.Binding("Checked", this.userBindingSource, "Activated", true));
+            this.rbnNo.Location = new System.Drawing.Point(826, 57);
+            this.rbnNo.Name = "rbnNo";
+            this.rbnNo.Size = new System.Drawing.Size(39, 15);
+            this.rbnNo.TabIndex = 25;
+            this.rbnNo.Text = "No";
+            this.rbnNo.UseSelectable = true;
+            // 
+            // rbnYes
+            // 
+            this.rbnYes.AutoSize = true;
+            this.rbnYes.DataBindings.Add(new System.Windows.Forms.Binding("Checked", this.userBindingSource, "Activated", true));
+            this.rbnYes.Location = new System.Drawing.Point(788, 57);
+            this.rbnYes.Name = "rbnYes";
+            this.rbnYes.Size = new System.Drawing.Size(32, 15);
+            this.rbnYes.TabIndex = 24;
+            this.rbnYes.Text = "Si";
+            this.rbnYes.UseSelectable = true;
             // 
             // metroDateTime1
             // 
@@ -635,28 +657,6 @@
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseSelectable = true;
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
-            // 
-            // rbnNo
-            // 
-            this.rbnNo.AutoSize = true;
-            this.rbnNo.DataBindings.Add(new System.Windows.Forms.Binding("Checked", this.userBindingSource, "Activated", true));
-            this.rbnNo.Location = new System.Drawing.Point(826, 57);
-            this.rbnNo.Name = "rbnNo";
-            this.rbnNo.Size = new System.Drawing.Size(39, 15);
-            this.rbnNo.TabIndex = 25;
-            this.rbnNo.Text = "No";
-            this.rbnNo.UseSelectable = true;
-            // 
-            // rbnYes
-            // 
-            this.rbnYes.AutoSize = true;
-            this.rbnYes.DataBindings.Add(new System.Windows.Forms.Binding("Checked", this.userBindingSource, "Activated", true));
-            this.rbnYes.Location = new System.Drawing.Point(788, 57);
-            this.rbnYes.Name = "rbnYes";
-            this.rbnYes.Size = new System.Drawing.Size(32, 15);
-            this.rbnYes.TabIndex = 24;
-            this.rbnYes.Text = "Si";
-            this.rbnYes.UseSelectable = true;
             // 
             // FrmUser
             // 

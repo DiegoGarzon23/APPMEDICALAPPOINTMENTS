@@ -96,18 +96,9 @@ namespace APPMEDICALAPPOINTMENTS
             }
         }
 
-        private void btnSalir_Click(object sender, EventArgs e)
-        {
-            pnlDatos.Enabled = false;
-            userBindingSource.ResetBindings(false);
-            FrmUsers_Load(sender, e);
+      
 
-        }
-
-        private void FrmUsers_Load(object sender, EventArgs e)
-        {
-            throw new NotImplementedException();
-        }
+       
 
         private void grdDatos_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -115,7 +106,17 @@ namespace APPMEDICALAPPOINTMENTS
             
         }
 
-       
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            pnlDatos.Enabled = false;
+            userBindingSource.ResetBindings(false);
+            FrmUser_Load(sender, e);
+        }
+
+        private void FrmUser_Load(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
     

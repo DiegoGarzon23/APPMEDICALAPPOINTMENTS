@@ -103,15 +103,13 @@ namespace APPMEDICALAPPOINTMENTS
             statusBindingSource.ResetBindings(false);
             FrmStatus_Load(sender, e);
         }
+       
 
         private void grdDatos_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             Status status = statusBindingSource.Current as Status;
         }
 
-        private void pnlDatos_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
+      
     }
 }
